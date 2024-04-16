@@ -219,6 +219,38 @@
 									"type": "DatasetReference"
 								}
 							]
+						},
+						{
+							"name": "act_delete_source_file",
+							"type": "Delete",
+							"dependsOn": [
+								{
+									"activity": "act_copy_data_from_blob_to_adls_gen2_copy1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "DS_POPULATION_RAW_GZ",
+									"type": "DatasetReference"
+								},
+								"enableLogging": false,
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
+							}
 						}
 					]
 				}
