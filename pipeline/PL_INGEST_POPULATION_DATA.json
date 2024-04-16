@@ -140,6 +140,26 @@
 						"value": "@equals(activity('act_Get_File_Metadata1').output.columnCount,13 )",
 						"type": "Expression"
 					},
+					"ifFalseActivities": [
+						{
+							"name": "act_send_email",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"method": "POST",
+								"url": "https://file_incompatible",
+								"body": "dummy"
+							}
+						}
+					],
 					"ifTrueActivities": [
 						{
 							"name": "act_copy_data_from_blob_to_adls_gen2_copy1",
