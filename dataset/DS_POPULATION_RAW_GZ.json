@@ -1,0 +1,23 @@
+{
+	"name": "DS_POPULATION_RAW_GZ",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_STORAGE_ACCOUNT",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "population-by-age.tsv",
+				"container": "population"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
