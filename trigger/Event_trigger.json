@@ -1,0 +1,24 @@
+{
+	"name": "Event_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_INGEST_POPULATION_DATA",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/population/blobs/population_by_age_tsv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/569f1eae-bb7a-46d9-ab5e-b99889659248/resourceGroups/srp-ADF-Covid19/providers/Microsoft.Storage/storageAccounts/covid19blobstorage1",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
