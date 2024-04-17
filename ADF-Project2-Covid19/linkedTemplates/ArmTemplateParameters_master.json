@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-Project2-Covid19"
+		},
+		"LS_ADLS_GEN_2_accountKey": {
+			"value": ""
+		},
+		"LS_BLOB_STORAGE_ACCOUNT_connectionString": {
+			"value": ""
+		},
+		"LS_ADLS_GEN_2_properties_typeProperties_url": {
+			"value": "https://covid19adlsgen2.dfs.core.windows.net/"
+		},
+		"Event_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/569f1eae-bb7a-46d9-ab5e-b99889659248/resourceGroups/srp-ADF-Covid19/providers/Microsoft.Storage/storageAccounts/covid19blobstorage1"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
