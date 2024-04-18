@@ -11,7 +11,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "raw/main/ecdc_data/cases_deaths.csv",
+					"value": "/covid19/raw/main/ecdc_data/cases_deaths.csv",
 					"type": "Expression"
 				}
 			},
