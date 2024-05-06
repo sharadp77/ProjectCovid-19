@@ -19,9 +19,9 @@
 			"type": "string",
 			"defaultValue": "https://covid19adlsgen2.dfs.core.windows.net/"
 		},
-		"Event_trigger_properties_typeProperties_scope": {
+		"LS_HTTP_OPEN_DATA_ECDC_EUROPA_EU_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "/subscriptions/569f1eae-bb7a-46d9-ab5e-b99889659248/resourceGroups/srp-ADF-Covid19/providers/Microsoft.Storage/storageAccounts/covid19blobstorage1"
+			"defaultValue": "https://github.com"
 		},
 		"containerUri": {
 			"type": "string",
@@ -59,8 +59,8 @@
 					"LS_ADLS_GEN_2_properties_typeProperties_url": {
 						"value": "[parameters('LS_ADLS_GEN_2_properties_typeProperties_url')]"
 					},
-					"Event_trigger_properties_typeProperties_scope": {
-						"value": "[parameters('Event_trigger_properties_typeProperties_scope')]"
+					"LS_HTTP_OPEN_DATA_ECDC_EUROPA_EU_properties_typeProperties_url": {
+						"value": "[parameters('LS_HTTP_OPEN_DATA_ECDC_EUROPA_EU_properties_typeProperties_url')]"
 					}
 				}
 			},
